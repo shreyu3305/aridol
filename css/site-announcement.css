@@ -1,0 +1,103 @@
+.so-site-announcement-container {
+    position: fixed;
+    display: none;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.so-site-announcement-fade {
+    display: none;
+}
+
+.so-site-announcement-fade.so-site-announcement-container-position-popup {
+    content: "";
+    opacity: .5;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.so-site-announcement-container p {
+    color: #222;
+}
+
+.so-site-announcement-container.so-site-announcement-container-position-bottom {
+    bottom: 0;
+}
+
+.so-site-announcement-container.so-site-announcement-container-position-top {
+    top: 0;
+}
+
+.so-site-announcement-container.so-site-announcement-container-position-popup {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: auto !important;
+    top: 33%;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+}
+
+.so-site-announcement-container.so-site-announcement-container-severity-warning {
+    background: #ffdf7e;
+}
+
+.so-site-announcement-container.so-site-announcement-container-severity-danger {
+    background: #ff907f;
+}
+
+.so-site-announcement-container.so-site-announcement-container-severity-warning .so-site-announcement-link,
+.so-site-announcement-container.so-site-announcement-container-severity-danger .so-site-announcement-link{
+    color: #222;
+}
+
+.so-site-announcement-inner {
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.so-site-announcement-icon {
+    flex: 0 0 30px;
+}
+
+.so-site-announcement-text-container {
+    flex: 1 1 auto;
+    padding: 0 0 0 1rem;
+}
+
+.so-site-announcement-text {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+}
+
+.so-site-announcement-link {
+    display: block;
+    margin-right: 2rem;
+    text-decoration: underline;
+}
+
+.so-site-announcement-actions {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width: 768px) {
+    .so-site-announcement-text-container {
+        padding-left: 2rem;
+    }
+}
